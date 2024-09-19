@@ -1,63 +1,105 @@
-# KecHat SocialFi Web3 Wallet
+ethers.js
+=========
 
-Welcome to the KecHat SocialFi Web3 Wallet repository! This project provides a secure, open-source wallet solution designed to seamlessly integrate with the KecHat social platform, enabling users to manage their digital assets with confidence.
+[![npm version](https://badge.fury.io/js/ethers.svg)](https://badge.fury.io/js/ethers)
 
-## Overview
+Complete Ethereum wallet implementation and utilities in JavaScript (and TypeScript).
 
-The KecHat Web3 Wallet is a cutting-edge solution built to empower users in the decentralized finance (DeFi) space. Our wallet prioritizes security, user experience, and interoperability, providing users with full control over their assets while ensuring their data remains private and secure.
+**Features:**
 
-## Features
+- Keep your private keys in your client, **safe** and sound
+- Import and export **JSON wallets** (Geth, Parity and crowdsale)
+- Import and export BIP 39 **mnemonic phrases** (12 word backup phrases) and **HD Wallets** (English, French, Italian, Japanese, Korean, Simplified Chinese, Spanish, Traditional Chinese)
+- Meta-classes create JavaScript objects from any contract ABI, including **ABIv2** and **Human-Readable ABI**
+- Connect to Ethereum nodes over [JSON-RPC](https://github.com/ethereum/wiki/wiki/JSON-RPC), [INFURA](https://infura.io), [Etherscan](https://etherscan.io), or [MetaMask](https://metamask.io)
+- **ENS names** are first-class citizens; they can be used anywhere an Ethereum addresses can be used
+- **Tiny** (~84kb compressed; 270kb uncompressed)
+- **Complete** functionality for all your Ethereum needs
+- Extensive [documentation](https://docs.ethers.io/ethers.js/html/)
+- Large collection of **test cases** which are maintained and added to
+- Fully **TypeScript** ready, with definition files and full TypeScript source
+- **MIT License** (including ALL dependencies); completely open source to do with as you please
 
-- **Open-Source**: Our wallet is fully open-source, allowing developers and users to review, audit, and contribute to the codebase. Transparency is key to building trust within the community.
 
-- **Security First**: We employ industry-standard security practices, including end-to-end encryption, hardware wallet integration, and multi-signature support, ensuring your assets are safeguarded against potential threats.
+Keep Updated
+------------
 
-- **User-Friendly Interface**: Designed with usability in mind, our wallet features an intuitive interface that simplifies the management of digital assets, enabling both novice and experienced users to navigate effortlessly.
+For the latest news and advisories, please follow [@ethersproject](https://twitter.com/ethersproject) on Twitter as well as this GitHub project.
 
-- **Multi-Blockchain Support**: The KecHat Wallet supports a variety of blockchain networks, providing users with the flexibility to manage diverse digital assets in one place.
 
-- **Seamless Integration**: As part of the KecHat SocialFi ecosystem, the wallet enables users to engage in social interactions and financial transactions effortlessly, creating a vibrant community experience.
+Installing
+----------
 
-## Getting Started
+To use in a browser:
 
-To get started with the KecHat Web3 Wallet:
+```html
+<script charset="utf-8"
+        src="https://cdn.ethers.io/scripts/ethers-v4.min.js"
+        type="text/javascript">
+</script>
+```
 
-1. **Clone the Repository**:
-   ```bash
-   git clone https://github.com/yourusername/kecHat-web3-wallet.git
-   cd kecHat-web3-wallet
-   ```
+To use in [node.js](https://nodejs.org/):
 
-2. **Install Dependencies**:
-   ```bash
-   npm install
-   ```
+```
+/Users/ethers/my-app> npm install --save ethers
+```
 
-3. **Run the Application**:
-   ```bash
-   npm start
-   ```
 
-4. **Access the Wallet**: Open your browser and navigate to `http://localhost:3000` to access the wallet interface.
+Documentation
+-------------
 
-## Contributing
+Browse the [API Documentation](https://docs.ethers.io/ethers.js/html/) online.
 
-We welcome contributions from the community! To contribute to the KecHat Web3 Wallet:
+To fork and submit pull requests to the documentation, please see the
+[documentation repository](https://github.com/ethers-io/documentation).
 
-1. Fork the repository.
-2. Create a new branch for your feature or bug fix.
-3. Submit a pull request detailing your changes.
 
-Please ensure that your contributions adhere to our coding standards and include relevant tests.
+Related Libraries
+---------------
 
-## License
+- [Command Line Interface](https://github.com/ethers-io/ethers-cli) - Command Line Tools for ethers
+- [CryptoKitties](https://github.com/ricmoo/ethers-meow) - CryptoKitties utility libraries
+- [ENS](https://github.com/ethers-io/ethers-ens) - ENS utility libraries for managing names
+- [LedgerSigner](https://github.com/ethers-io/ethers-ledger) - Use a Ledger Hardware Wallet as an ethers Signer (supports HID (node.js) and U2F (browser); or specify your own transport)
+- [Web3 Bridge](https://github.com/ethers-io/ethers-web3-bridge) - Use ethers as the backend for a Web3 front-end
 
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
 
-## Support
+Hacking and Contributing
+------------------------
 
-For support and inquiries, please reach out to our community on [Discord](https://discord.gg/yourcommunity) or submit an issue in the repository.
+The JavaScript code is now generated from TypeScript, so make sure you modify the
+TypeScript and compile it, rather than modifying the JavaScript directly. To start
+auto-compiling the TypeScript code, you may use:
 
----
+```
+/home/ethers> npm run auto-build
+```
 
-Thank you for your interest in the KecHat SocialFi Web3 Wallet! Together, we can shape the future of decentralized finance and social interaction.
+A very important part of ethers is its exhaustive test cases, so before making any
+bug fix, please add a test case that fails prior to the fix, and succeeds after the
+fix. All regression tests must pass.
+
+Pull requests are always welcome, but please keep a few points in mind:
+
+- Compatibility-breaking changes will not be accepted; they may be considered for the next major version
+- Security is important; adding dependencies require fairly convincing arguments
+- The library aims to be lean, so keep an eye on the `dist/ethers.min.js` file size before and after your changes
+- Add test cases for both expected and unexpected input
+- Any new features need to be supported by us (issues, documentation, testing), so anything that is overly complicated or specific may not be accepted
+
+In general, **please start an issue before beginning a pull request**, so we can have a public discussion. :)
+
+
+Donations
+---------
+
+I do this because I love it, but if you want to buy me a coffee, I won't say no. **:o)**
+
+Ethereum: `0xEA517D5a070e6705Cc5467858681Ed953d285Eb9`
+
+
+License
+-------
+
+Completely MIT Licensed. Including ALL dependencies.
